@@ -1,0 +1,26 @@
+Enabled features:
+ * Unit tests, Enable unit tests support with BCUnit library.
+ * Tools, Enable tools binary compilation.
+ * Xml2, Enable bc version of libxml2
+ * Sqlite, Enable bc version of sqlite3
+ * Zlib, Enable bc version of zlib
+ * Mbedtls, Crypto stack implementation based on mbeddtls.
+ * SRTP, SRTP media encryption support.
+ * ZRTP, ZRTP media encryption support.
+ * WebRTC AEC, WebRTC echo canceller support.
+ * GSM, GSM audio encoding/decoding support.
+ * iLBC, iLBC audio encoding/decoding support.
+ * OPUS, OPUS audio encoding/decoding support.
+ * Speex, Speex audio encoding/decoding support.
+ * BV16, BroadVoice 16 audio encoding/decoding support.
+ * Video, Ability to capture and display video.
+ * jpeg, JPEG support with libjpeg-turbo.
+ * MKV, MKV playing and recording support.
+ * VPX, VPX (VP8) video encoding/decoding support.
+ * CXX wrapper, Build the C++ wrapper for Liblinphone.
+ * LIME X3DH, Enable Linphone IM Encryption version 2 support in  Liblinphone.
+ * LDAP, Enable LDAP Liblinphone.
+ * VCARD, Enable vCard 4 support in Linphone and Liblinphone.
+ * Assets, Enable packaging of assets (ringtones) when building the SDK.
+ * Advanced IM, Enable advanced instant messaging such as group chat.
+ * DB Storage, Enable the database storage.

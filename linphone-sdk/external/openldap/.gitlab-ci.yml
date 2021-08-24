@@ -1,0 +1,26 @@
+workflow:
+  rules:
+    - if: '$CI_COMMIT_REF_NAME == "OPENLDAP_REL_ENG_2_4" && $CI_PROJECT_NAMESPACE != "openldap"'
+      when: never
+    - when: always
+
+stages:
+  - build
+
+build:
+  stage: build
+  script:
+    - apt update
+    - apt install -y build-essential pkg-config automake libsasl2-dev libdb5.3-dev heimdal-multidev libssl-dev libltdl-dev groff-base unixodbc-dev libperl-dev
+    - ./configure --enable-backends=mod --enable-overlays=mod --enable-modules --enable-dynamic --disable-ndb
+    - make depend
+    - make
+    - ulimit -n 4096 # back-monitor takes a while scanning a long connections array
+    - make test
+  timeout: 2h
+  artifacts:
+    name: testdir
+    when: on_failure
+    expire_in: '1 week'
+    paths:
+      - tests/testrun/
